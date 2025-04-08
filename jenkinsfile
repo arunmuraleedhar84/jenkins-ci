@@ -1,12 +1,12 @@
 pipeline {
     agent any
     stages {
-        
-        stage('Clone') {stage('Who am I') {
+        stage('Who am I') {
             steps {
                 sh 'whoami'
             }
         }
+        stage('Clone') {
             steps {
                 git branch: 'main',
                     url: 'https://github.com/arunmuraleedhar84/jenkins-test-app.git'
