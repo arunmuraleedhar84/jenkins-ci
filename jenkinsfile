@@ -22,14 +22,14 @@ pipeline {
         stage('Deploy to Staging') {
             steps {
                 echo "Deploying to staging..."
-                sh 'cp index.html /var/www/staging.example.com/index.html'
+                sh 'sudo cp index.html /var/www/staging.example.com/index.html'
             }
         }
         stage('Deploy to Production') {
             steps {
                 input message: 'Promote to production?'
                 echo "Deploying to production..."
-                sh 'cp index.html /var/www/production.example.com/index.html'
+                sh 'sudo cp index.html /var/www/production.example.com/index.html'
             }
         }
     }
